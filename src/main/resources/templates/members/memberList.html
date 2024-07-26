@@ -7,12 +7,14 @@
             <thead>
             <tr>
                 <th>#</th>
-                <th>이름</th> </tr>
+                <th>회원 목록</th> </tr>
             </thead>
             <tbody>
-<!--            members 의 데이터들 순회하며 출력-->
+<!--            모델 속성을 순회하여 각 member 객체를 테이블 행으로 출력-->
             <tr th:each="member : ${members}">
+<!--                객체의 id 속성을 출력-->
                 <td th:text="${member.id}"></td>
+<!--                객체의 name 속성을 출력-->
                 <td th:text="${member.name}"></td>
             </tr>
             </tbody>

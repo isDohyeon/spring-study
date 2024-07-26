@@ -2,15 +2,14 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <body>
 <div class="container">
-    <!-- action 의 URL 이 post 방식으로 넘어온다
-        memberController 의 @PostMapping 으로 이동-->
+<!--    폼의 데이터를 /members/new URL로 POST 방식으로 전송 -->
     <form action="/members/new" method="post">
         <div class="form-group">
-            <label for="name">이름</label>
-
+            <label for="name">등록 이름</label>
+<!--            사용자가 이름을 입력할 수 있는 텍스트 필드. 이 필드의 name 속성은 name 으로 설정-->
             <input type="text" id="name" name="name" placeholder="이름을 입력하세요">
         </div>
-        <button type="submit">등록</button>
+        <button type="submit">회원 등록</button>
     </form>
 </div> <!-- /container -->
 </body>
