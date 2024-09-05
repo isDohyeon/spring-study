@@ -1,4 +1,4 @@
-package study.level1.member;
+package level1.member;
 
 import java.util.HashMap;
 import java.util.Map;

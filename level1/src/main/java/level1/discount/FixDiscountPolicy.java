@@ -1,7 +1,7 @@
-package study.level1.discount;
+package level1.discount;
 
-import study.level1.member.Grade;
-import study.level1.member.Member;
+import level1.member.Grade;
+import level1.member.Member;
 
 public class FixDiscountPolicy implements DiscountPolicy {
 

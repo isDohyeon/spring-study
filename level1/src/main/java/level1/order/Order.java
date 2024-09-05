@@ -1,4 +1,4 @@
-package study.level1.order;
+package level1.order;
 
 public class Order {
 

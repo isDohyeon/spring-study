@@ -1,6 +1,7 @@
-package study.level1.member;
+package level1.member;
 
 public class Member {
+
     private Long id;
     private String name;
     private Grade grade;

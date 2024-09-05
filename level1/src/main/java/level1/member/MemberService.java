@@ -1,4 +1,4 @@
-package study.level1.member;
+package level1.member;
 
 public interface MemberService {
 

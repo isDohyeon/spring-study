@@ -1,10 +1,10 @@
-package study.level1.order;
+package level1.order;
 
-import study.level1.discount.DiscountPolicy;
-import study.level1.discount.FixDiscountPolicy;
-import study.level1.member.Member;
-import study.level1.member.MemberRepository;
-import study.level1.member.MemoryMemberRepository;
+import level1.discount.DiscountPolicy;
+import level1.discount.FixDiscountPolicy;
+import level1.member.Member;
+import level1.member.MemberRepository;
+import level1.member.MemoryMemberRepository;
 
 public class OrderServiceImp implements OrderService {
 
@@ -14,7 +14,9 @@ public class OrderServiceImp implements OrderService {
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
         Member member = memberRepository.findById(memberId);
+
         int discountPrice = discountPolicy.discount(member, itemPrice);
+
         return new Order(memberId, itemName, itemPrice, discountPrice);
     }
 }

@@ -1,9 +1,9 @@
-package study.level1.order;
+package level1.order;
 
-import study.level1.member.Grade;
-import study.level1.member.Member;
-import study.level1.member.MemberService;
-import study.level1.member.MemberServiceImp;
+import level1.member.Grade;
+import level1.member.Member;
+import level1.member.MemberService;
+import level1.member.MemberServiceImp;
 
 public class OrderApp {
 

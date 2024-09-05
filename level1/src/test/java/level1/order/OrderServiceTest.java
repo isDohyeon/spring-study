@@ -1,13 +1,11 @@
-package study.level1.order;
+package level1.order;
 
+import level1.member.Grade;
+import level1.member.Member;
+import level1.member.MemberService;
+import level1.member.MemberServiceImp;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
-import study.level1.member.Grade;
-import study.level1.member.Member;
-import study.level1.member.MemberService;
-import study.level1.member.MemberServiceImp;
-
-import static org.junit.jupiter.api.Assertions.*;
 
 class OrderServiceTest {
 
