@@ -1,15 +1,18 @@
 package level1.order;
 
 import level1.discount.DiscountPolicy;
-import level1.discount.FixDiscountPolicy;
 import level1.member.Member;
 import level1.member.MemberRepository;
-import level1.member.MemoryMemberRepository;
 
 public class OrderServiceImp implements OrderService {
 
-    private final MemberRepository memberRepository = new MemoryMemberRepository();
-    private final DiscountPolicy discountPolicy = new FixDiscountPolicy();
+    private final MemberRepository memberRepository;
+    private final DiscountPolicy discountPolicy;
+
+    public OrderServiceImp(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+        this.memberRepository = memberRepository;
+        this.discountPolicy = discountPolicy;
+    }
 
     @Override
     public Order createOrder(Long memberId, String itemName, int itemPrice) {
