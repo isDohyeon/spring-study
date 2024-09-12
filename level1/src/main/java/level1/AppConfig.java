@@ -17,12 +17,14 @@ public class AppConfig {
 
     @Bean
     public MemberService memberService() {
-        return new MemberServiceImp(getMemberRepository());
+        System.out.println("call AppConfig.memberService");
+        return new MemberServiceImp(memberRepository());
     }
 
     @Bean
     public OrderService orderService() {
-        return new OrderServiceImp(getMemberRepository(), getDiscountPolicy());
+        System.out.println("call AppConfig.orderService");
+        return new OrderServiceImp(memberRepository(), getDiscountPolicy());
     }
 
     /**
@@ -32,7 +34,8 @@ public class AppConfig {
      * @return 저장소의 종류
      */
     @Bean
-    public static MemberRepository getMemberRepository() {
+    public MemberRepository memberRepository() {
+        System.out.println("call AppConfig.memberRepository");
         // 1
         return new MemoryMemberRepository();
         // 2
