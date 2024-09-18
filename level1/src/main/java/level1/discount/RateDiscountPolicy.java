@@ -2,7 +2,9 @@ package level1.discount;
 
 import level1.member.Grade;
 import level1.member.Member;
+import org.springframework.stereotype.Component;
 
+@Component
 public class RateDiscountPolicy implements DiscountPolicy {
     /**
      * 할인 금액을 정하고, 멤버의 등급에 따라 할인 금액을 반환한다.
